@@ -91,10 +91,6 @@ $allSong = getAllSong();
 
                                 <div class="d-flex justify-content-between">
 
-                                    <a href="view_songPlaylist.php" class="btn btn-secondary">
-                                        Back
-                                    </a>
-
                                     <button type="submit" name="addSongPlaylist" class="btn btn-primary">
                                         Add Song to Playlist
                                     </button>
