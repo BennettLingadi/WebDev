@@ -15,11 +15,17 @@
         <div class="card text-center">
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
-                    <li class="nav-item">
+                   <li class="nav-item">
                         <a class="nav-link active" href="view_playlist.php">Playlist</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="view_addplaylist.php">New Playlist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="view_song.php">Song List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="view_addsong.php">New Song</a>
                     </li>
 
                 </ul>
