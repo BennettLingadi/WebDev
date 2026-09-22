@@ -1,3 +1,4 @@
+<?php require("controller_song.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,16 +39,31 @@
                             </tr>
                         </thead>
                         <tbody>
+
+                            <?php
+                            $counter = 0;
+                            $allSong = getAllSong();
+                            foreach($allSong as $index => $song){
+                                $counter++;
+                            ?>
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Teh Hijau</td>
-                                <td>Tulus</td>
-                                <td>Manusia</td>
+                                <th scope="row"><?=$counter?></th>
+                                <td><?=$song->song_name?></td>
+                                <td><?=$song->artist?></td>
+                                <td><?=$song->album?></td>
                                 <td>
-                                    <button class="btn btn-warning">Update</button>
+                                    <a href="view_updatesong.php?updateID=<?=$index?>">
+                                    <button class="btn btn-warning" name="updatebtn">Update</button>
+                                    </a>
+                                    <a href="controller_song.php?deleteID=<?=$index?>">
                                     <button class="btn btn-danger">Delete</button>
+                                    </a>
                                 </td>
                             </tr>
+                            <?php
+                            }
+                            ?>
+
                         </tbody>
                     </table>
                 </div>

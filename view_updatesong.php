@@ -1,3 +1,11 @@
+<?php
+require("controller_song.php");
+if (isset($_GET["updateID"])) {
+    $song_id = $_GET["updateID"];
+    $song = getSongWithID($song_id);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,35 +26,37 @@
                         <a class="nav-link" href="view_song.php">Song List</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="view_addsong.php">New Song</a>
+                        <a class="nav-link" href="view_addsong.php">New Song</a>
                     </li>
 
                 </ul>
             </div>
             <div class="card-body">
-                <h1 class="text-center"> New Song </h1>
+                <h1 class="text-center"> Update Song </h1>
                 <form method="POST" action="controller_song.php">
                     <div class="row pt-5">
                         <div class="col">
                             <label for="inputSongName">Song Name</label>
-                            <input type="text" class="form-control" name="inputSongName">
+                            <input type="text" class="form-control" name="inputSongName"
+                                value="<?=$song->song_name?>">
                         </div>
 
 
                         <div class="col">
                             <label for="inputArtist">Artist</label>
-                            <input type="text" class="form-control" name="inputArtist">
+                            <input type="text" class="form-control" name="inputArtist" value="<?=$song->artist?>">
                         </div>
 
-                        <div class="col">
+                        <div class=" col">
                             <label for="inputAlbum">Album</label>
-                            <input type="text" class="form-control" name="inputAlbum">
+                            <input type="text" class="form-control" name="inputAlbum" value="<?=$song->album?>">
                         </div>
                     </div>
-                    <div class="text-center">
-                         <button name="submitSong" type="submit" class="btn btn-primary mt-3">Submit</button>
-                    </div>
-                   
+                    <input type="hidden" name="input_id" value="<?=$song_id?>">
+                    <div class=" text-center">
+                            <button name="updatebtn" type="submit" class="btn btn-primary mt-3">Update</button>
+                        </div>
+
                 </form>
             </div>
         </div>
