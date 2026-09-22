@@ -1,5 +1,6 @@
 <?php
-include("model_song.php");
+
+require_once("model_song.php");
 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();

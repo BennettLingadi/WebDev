@@ -1,11 +1,20 @@
 <?php
-include("model_playlist.php");
+
+require_once("model_playlist.php");
+require_once("model_song.php");
+
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
+
 if (!isset($_SESSION['playlist'])) {
     $_SESSION['playlist'] = array();
 }
+
+if (!isset($_SESSION['songlist'])) {
+    $_SESSION['songlist'] = array();
+}
+
 
 function createPlaylist(){
     $playlist = new model_playlist();
