@@ -89,7 +89,7 @@ $allSong = getAllSong();
                                     </select>
                                 </div>
 
-                                <div class="d-flex justify-content-between">
+                                <div class="text-center">
 
                                     <button type="submit" name="addSongPlaylist" class="btn btn-primary">
                                         Add Song to Playlist
