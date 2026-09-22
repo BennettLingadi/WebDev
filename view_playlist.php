@@ -27,6 +27,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="view_addsong.php">New Song</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="view_addsongplaylist.php">New Playlist and Song</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="view_songplaylist.php">Playlist and Song List</a>
+                    </li>
 
                 </ul>
             </div>

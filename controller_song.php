@@ -1,7 +1,9 @@
 <?php
 include("model_song.php");
 
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 if (!isset($_SESSION["songlist"])) {
     $_SESSION["songlist"] = array();

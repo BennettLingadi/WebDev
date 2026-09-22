@@ -23,10 +23,22 @@ if (isset($_GET["updateID"])) {
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
+                        <a class="nav-link" href="view_playlist.php">Playlist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="view_addplaylist.php">New Playlist</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="view_song.php">Song List</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="view_addsong.php">New Song</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="view_addsongplaylist.php">New Playlist and Song</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="view_songplaylist.php">Playlist and Song List</a>
                     </li>
 
                 </ul>
